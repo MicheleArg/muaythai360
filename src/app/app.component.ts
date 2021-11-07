@@ -35,7 +35,6 @@ export class AppComponent {
   title = 'muaythai360'; 
   lastScrollTop = 0;
   sizeNum = 1;
-  size = 'scale(' + this.sizeNum + ')';
 
   @HostListener("window:scroll", []) onWindowScroll() {
     // var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
