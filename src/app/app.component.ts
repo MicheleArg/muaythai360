@@ -30,6 +30,7 @@ export class AppComponent {
   gallery11 = 'assets/img/gallery11.jpg';
   facebookLogo = 'assets/img/facebook.png';
   igLogo = 'assets/img/ig.png';
+  about = 'assets/img/about.png'
 
   title = 'muaythai360'; 
   lastScrollTop = 0;
