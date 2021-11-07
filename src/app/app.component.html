@@ -1,0 +1,706 @@
+
+<style>
+  ::ng-deep :root {
+    --gold: rgb(242, 199, 130);
+    --gold-opacity: rgb(242, 199, 130, 0.8);
+  }
+  
+  
+  @font-face {
+    font-family: 'DINLig';
+    src: url('../assets/fonts/DINNeuzeitGroteskStdLight.otf') format('opentype');
+  }
+
+  @font-face {
+    font-family: 'DIN';
+    src: url('../assets/fonts/DINNeuzeitGroteskStdBdCond.otf') format('opentype');
+  }
+
+  ::ng-deep body {
+    background-color: black;
+    overflow-x: hidden;
+  }
+
+  :host {
+    font-family: 'DIN', Fallback, sans-serif !important;
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: black;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 8px 0;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .spacer {
+    flex: 1;
+  }
+
+  .toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    display: inline-grid; 
+    align-items: center;
+    background-color: black;
+    color: white;
+    font-weight: 600;
+  }
+
+  .toolbar img {
+    margin: 25px auto auto auto;
+  }
+
+  .content {
+    position: absolute;
+    top: 200px;
+    left: 0;
+    right: 0;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: inherit;
+    background-size: cover;
+    height: 500px;
+    opacity: 0.87;
+
+  }
+
+  .navigation-header{
+    display: inline;
+    margin: auto;
+  }
+
+  .navigation-ul{
+    padding: 0;
+  }
+
+  .navigation-ul li{
+    display: inline;
+    font-size: 18px;
+    letter-spacing: -0.7px;
+  }
+
+  .navigation-li{
+    margin: 15px;
+  }
+
+  .navigation-li a{
+    color: white;
+    text-decoration: none;
+
+  }
+
+  .navigation-li a:visited{
+    text-transform: none;
+  }
+
+  .navigation-li a:hover{
+    color: var(--gold);
+    cursor: pointer;
+  }
+
+  .center {
+    margin: auto;
+    width: 100%;
+    padding: 180px 0px 0px 0px;
+  }
+
+  .home-title{
+    font-family: 'DIN', Fallback, sans-serif !important;
+    text-align: center;
+    font-size: 50px;
+    letter-spacing: 15px;
+    color: white;
+  }
+
+  .home-subtitle{
+    text-align: center;
+    font-size: 25px;
+    line-height: normal;
+    letter-spacing: 0.42em;
+    color: white;
+  }
+
+  .home-button-div{
+    width: 11%;
+    margin: auto;
+  }
+
+  .home-button{
+    background-color: rgb(0,0,0,0.8);
+    border: none;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    height: 45px;
+    width: 160px;
+    cursor: pointer;
+    margin-top: 30px;
+  }
+
+  .home-button:hover{
+    background-color: var(--gold-opacity);
+    border: none;
+    text-align: center;
+    font-size: 20px;
+    color: black;
+    height: 45px;
+    width: 160px;
+    cursor: pointer;
+    margin-top: 30px;
+  }
+
+  .about{
+    position: absolute;
+    background-color: black;
+    top: 700px;
+    left: 0;
+    right: 0;
+  }
+
+  .center-about {
+    margin: auto;
+    padding: 100px 0px 0px 200px;
+  }
+
+  .title-about {
+    font-family: 'DIN', Fallback, sans-serif !important;
+    letter-spacing: 22px;
+    font-size: 6vw;
+  }
+
+  .p-about{
+    width: 420px;
+    color:white;
+    font-size: 16px;
+    line-height: 25px;
+    margin-bottom: 120px;
+  }
+
+  .container-about{
+    display: inline-flex;
+  }
+
+  .img-about{
+    width: 425px;
+    height: 485px;
+    padding-left: 130px;
+  }
+
+  .corsi{
+    position: absolute;
+    background-color: black;
+    top: 1750px;
+    left: 0;
+    right: 0;
+    height: 700px;
+  }
+
+  .video-corsi{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;  
+    z-index: 1;
+  }
+
+  .video-opacity{
+    z-index: 2;
+    background-color: black;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    bottom: -110px;
+    left: 0;
+    right: 0;
+  }
+
+  .corsi-text-container{
+    width:100%;
+    z-index: 2;
+  }
+
+  .corsi-title{
+    margin: auto;
+    width: fit-content;
+    position: relative;
+    z-index: inherit;
+    color: var(--gold);
+    line-height: normal;
+    text-align: center;
+    font-size: 7vw;
+    letter-spacing: 0.25em;
+    padding-top: 40px;
+  }
+
+  .corsi-subtitle{
+    margin: auto;
+    width: 60%;
+    position: relative;
+    z-index: inherit;
+    color: var(--gold);
+    line-height: normal;
+    text-align: center;
+    font-size: 1vw;
+    letter-spacing: 0.25em;
+    padding-top: 10px;
+  }
+
+  .corsi-table{
+    margin: auto;
+    width: 80%;
+    position: relative;
+    z-index: inherit;
+    color: var(--gold);
+    line-height: normal;
+    text-align: left;
+    font-size: 2.5vw;
+    letter-spacing: 0.25em;
+    padding-top: 10vw;
+  }
+
+  .corsi-table td{
+    width: 20%;
+  }
+
+  .bo{
+    position: absolute;
+    background-color: black;
+    top: 2560px;
+    left: 0;
+    right: 0;
+    height: 700px;
+  }
+
+  .bo-table{
+    margin: auto;
+    width: 92%;
+  }
+
+  .bo-td{
+    width: 33%;
+    height: 240px;
+    cursor: pointer;
+
+  }
+
+  .bo-td:hover{
+    transform: scale(0.97);
+  }
+
+  .bo-div{
+    background-color: rgb(150,150,149,0.6);
+    width: 100%;
+    height: 100%;
+    display: table;
+    cursor: pointer;
+  }
+
+  .bo-p{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 35px;
+    color: black;
+  }
+
+  .bo-div:hover {
+    visibility: hidden;
+  }
+
+  .bo-lezioni{
+    padding-top: 180px;
+    letter-spacing: 0.4em;
+    line-height: normal;
+    text-align: center;
+    font-size: 40px;
+    color: white;
+  }
+
+  .galleria{
+    position: absolute;
+    background-color: black;
+    top: 3390px;
+    left: 0;
+    right: 0;
+    height: 700px;
+  }
+
+  .galleria-table{
+    width: max-content;
+  }
+
+  .galleria-td{
+    width: 650px;
+    height: 500px;
+    overflow-x: scroll;
+  }
+
+  .galleria-element{
+    width: 650px;
+    height: 500px;
+    cursor:pointer;
+  }
+
+  .galleria-element:hover{
+    opacity: 0.5;
+  }
+
+  .galleria-div{
+    width: 100%;
+    overflow-x: scroll;
+  }
+
+  .galleria-td-element{
+    width: 323px;
+    height: 248px;
+    cursor: pointer;
+  }
+
+  .galleria-td-element:hover{
+    opacity: 0.5;
+  }
+
+  .galleria-td-container{
+    display: flex;
+  }
+
+  .location{
+    position: absolute;
+    top: 4090px;
+    left: 0;
+    right: 0;
+    height: 700px;
+  }
+
+  .location-fixed {
+    min-height: 700px;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  .location-title{
+    line-height: 1.2em;
+    text-align: center;
+    font-size: 88px;
+    letter-spacing: 0.25em;
+    color: white;
+    padding-top: 70px;
+  }
+
+  .location-subtitle{
+    line-height: normal;
+    text-align: center;
+    font-size: 32px;
+    letter-spacing: 0.4em;   
+    color: white;
+    padding-top: 90px;
+  }
+
+  .location-text{
+    font-size: 26px;
+    line-height: 1.5em;
+    text-align: center;
+    letter-spacing: normal;
+    color: white;
+    padding-top: 10px;
+  }
+
+  .domande{
+    position: absolute;
+    top: 4900px;
+    left: 0;
+    right: 0;
+    height: 330px;  
+  }
+
+  .domande-container{
+    display: flex;
+  }
+
+  .domande-element{
+    width: 33%;
+  }
+
+  .domande-title{
+    line-height: normal;
+    font-size: 32px;
+    color: var(--gold);
+    letter-spacing: 0.4em;
+  }
+
+  .domande-subtitle{
+    line-height: 1.3em;
+    font-size: 26px;
+    color: #FFFFFF;
+    letter-spacing: normal;
+    width: 57%;
+    padding-top: 50px;
+  }
+
+  .domande-text{
+    font-size: 18px;
+    color: #FFFFFF;
+    letter-spacing: normal;
+    padding-top: 20px;
+    line-height: 30px;
+  }
+
+  .domande-input-1{
+    background-color: black;
+    width: 90%;
+    margin-left: 40px;
+    border: 2px solid white;
+    height: 33px;
+    margin-bottom: 6px;
+    font-size: 17px;
+    color: white;
+  }
+
+  .domande-input-2{
+    background-color: black;
+    width: 90%;
+    margin-left: 40px;
+    border: 2px solid white;
+    height: 133px;
+    font-size: 17px;
+    margin-bottom: 6px;
+    color: white;
+  }
+
+  .domande-submit{
+    background-color: var(--gold);
+    width: 30%;
+    float: right;
+    border: 2px solid var(--gold);
+    height: 33px;
+    font-size: 18px;
+    margin-bottom: 6px;
+    color: black;
+  }
+  
+  ::placeholder {
+    color: white;
+    opacity: 1; /* Firefox */
+    font-size: 17px;
+    padding: 5px;
+    position: absolute;
+  }
+</style>
+
+<!-- Toolbar -->
+<div class="toolbar" role="banner">
+  <img width="100" alt="MuayThai360 Logo" src="{{logo}}"/>
+  <div class="navigation-header">
+    <ul class="navigation-ul">
+      <li class="navigation-li"><a href="#home">HOME</a></li>
+      <li class="navigation-li"><a href="#about">CHI SIAMO</a></li>
+      <li class="navigation-li"><a href="#corsi">CORSI</a></li>
+      <li class="navigation-li"><a href="#">ISTRUTTORI</a></li>
+      <li class="navigation-li"><a href="#">EVENTI</a></li>
+    </ul>
+  </div>
+
+</div>
+
+<section id="home" class="content" role="main" [ngStyle]="{'background-image': 'url(' + home + ')'}">
+
+  <div class="center">
+    <h1 class="home-title">MUAY THAI 360</h1>
+    <p class="home-subtitle">Il meglio dello sport in un'unica palestra</p> 
+    <div class="home-button-div">
+      <button class="home-button" onclick="window.location.href='#about'" ><b>Scopri di più</b></button>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="about" role="main">
+  <div class="center-about">
+    <div class="title-about"><span style="color: var(--gold);">LA NOSTRA</span><br><span style="color: white">STORIA</span></div>
+    <div class="container-about"> 
+      <p class="p-about"><b>TEAM PIACENTE</b><br><br>
+        Il Team è nato a San Salvo (CH)  ufficialmente nel <b>1996</b>, fondato  dal maestro Vincenzo Piacente.<br>
+        E' stato premiato come <b>miglior Team Nazionale nell’anno 1999</b>.<br>
+        Numerosi i successi ottenuti negli annii dai vari atleti a livello nazionale<br>
+        Vanta successi sia su competizioni dilettantistiche che PRO.<br><br>
+        Nel 2019  il maestro Piacente passa le redini al suo allievo direttissimo Marco Catalano che con la nuova gestione rinomina la nuova sede con il nome di:<br>
+        <b>-Muay Thai 360-</b><br><br>
+        <b>Muay thai 360 perchè?</b><br>
+        Per dare una conoscenza a 360 gradi ,dell’arte millenaria thailandese tra le sue mille sfaccettature ed applicazioni sportive tradizionali e militari.<br><br>
+        Nella nostra palestra è possibile praticare vari sport da combattimento e arti marziali. I corsi sono accessibili a tutti poiché le attività vengono suddivise in modo specifico, a seconda che siano donne o bambini, principianti o agonisti, oppure persone già allenate. Effettuiamo, inoltre, lezioni private e allenamenti liberi.</p>
+        <img class="img-about" src="../assets/img/about.png">
+    </div>
+  </div>
+</section>
+
+<section id="corsi" class="corsi" role="main">
+  <div class="video-opacity"> </div>
+  <video autoplay muted loop id="myVideo" class="video-corsi">
+    <source src="../assets/video/boxe.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
+  <div class="corsi-text-container">
+    <h1 class="corsi-title">I NOSTRI CORSI</h1>
+    <p class="corsi-subtitle">I corsi che proponiamo presso la nostra palestra ti permetteranno di raggiungere un benessere fisico e mentale. Grazie ai nostri allenamenti potrai migliorare la forza fisica, l'equilibrio, la coordinazione e l'armonia nei movimenti. Potrai, inoltre, ottenere una muscolatura più tonica ed elastica.</p>
+    <table class="corsi-table">
+      <tr>
+        <td style="border-bottom: 1px solid">SPORT DA COMBATTIMENTO</td>
+        <td></td>
+        <td style="border-bottom: 1px solid">DIFESA PERSONALE</td>
+        <td></td>
+        <td style="border-bottom: 1px solid">PERSONAL TRAINING</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td style="border-bottom: 1px solid; padding-top:100px">ARTI MARZIALI</td>
+        <td></td>
+        <td style="border-bottom: 1px solid; padding-top:100px">ALLENAMENTO FUNZIONALE</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+</section>
+
+<section id="bo" class="bo" role="main">
+  <table class="bo-table" cellspacing=0 cellpadding=0>
+    <tr>
+      <td class="bo-td" [ngStyle]="{'background-image': 'url(' + box1 + ')'}" style="background-position: center center;background-repeat: no-repeat;background-attachment: inherit;background-size: cover;">
+        <div class="bo-div">
+          <p class="bo-p">img1</p>
+        </div>
+      </td>
+      <td class="bo-td" [ngStyle]="{'background-image': 'url(' + box2 + ')'}" style="background-position: center center;background-repeat: no-repeat;background-attachment: inherit;background-size: cover;">
+        <div class="bo-div">
+          <p class="bo-p">img2</p>
+        </div>
+      </td>
+      <td class="bo-td" [ngStyle]="{'background-image': 'url(' + box3 + ')'}" style="background-position: center center;background-repeat: no-repeat;background-attachment: inherit;background-size: cover;">
+        <div class="bo-div">
+          <p class="bo-p">img3</p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td class="bo-td" [ngStyle]="{'background-image': 'url(' + box4 + ')'}" style="background-position: center center;background-repeat: no-repeat;background-attachment: inherit;background-size: cover;">
+        <div class="bo-div">
+          <p class="bo-p">img4</p>
+        </div>
+      </td>
+      <td class="bo-td" [ngStyle]="{'background-image': 'url(' + box5 + ')'}" style="background-position: center center;background-repeat: no-repeat;background-attachment: inherit;background-size: cover;">
+        <div class="bo-div">
+          <p class="bo-p">img5</p>
+        </div>
+      </td>
+      <td class="bo-td" [ngStyle]="{'background-image': 'url(' + box6 + ')'}" style="background-position: center center;background-repeat: no-repeat;background-attachment: inherit;background-size: cover;">
+        <div class="bo-div">
+          <p class="bo-p">img6</p>
+        </div>
+      </td>
+    </tr>
+  </table>
+
+  <div class="bo-lezioni">
+      INIZIA LE TUE LEZIONI DA OGGI
+  </div>
+</section>
+
+
+<section id="galleria" class="galleria" role="main">
+  <div class="galleria-div">
+  <table class="galleria-table" cellspacing=0 cellpadding=0>
+    <tr>
+      <td class="galleria-td">
+        <div class="galleria-element" [ngStyle]="{'background-image': 'url(' + gallery1 + ')'}" style="background-position: center center;background-repeat: no-repeat;background-attachment: inherit;background-size: cover;"></div>
+      </td>
+      <td class="galleria-td">
+        <div class="galleria-td-container">
+          <div class="galleria-td-element" [ngStyle]="{'background-image': 'url(' + gallery2 + ')'}" style="background-position: center center;background-repeat: no-repeat;background-attachment: inherit;background-size: cover;"></div>
+          <div class="galleria-td-element" [ngStyle]="{'background-image': 'url(' + gallery3 + ')'}" style="background-position: center center;background-repeat: no-repeat;background-attachment: inherit;background-size: cover;"></div>
+        </div>
+        <div class="galleria-td-container">
+          <div class="galleria-td-element" [ngStyle]="{'background-image': 'url(' + gallery4 + ')'}" style="background-position: center center;background-repeat: no-repeat;background-attachment: inherit;background-size: cover;"></div>
+          <div class="galleria-td-element" [ngStyle]="{'background-image': 'url(' + gallery5 + ')'}" style="background-position: center center;background-repeat: no-repeat;background-attachment: inherit;background-size: cover;"></div>
+        </div>
+      </td>
+      <td class="galleria-td">
+        <div class="galleria-element" [ngStyle]="{'background-image': 'url(' + gallery6 + ')'}" style="background-position: center center;background-repeat: no-repeat;background-attachment: inherit;background-size: cover;"></div>
+      </td>
+      <td class="galleria-td">
+        <div class="galleria-td-container">
+          <div class="galleria-td-element" [ngStyle]="{'background-image': 'url(' + gallery7 + ')'}" style="background-position: center center;background-repeat: no-repeat;background-attachment: inherit;background-size: cover;"></div>
+          <div class="galleria-td-element" [ngStyle]="{'background-image': 'url(' + gallery8+ ')'}" style="background-position: center center;background-repeat: no-repeat;background-attachment: inherit;background-size: cover;"></div>
+        </div>
+        <div class="galleria-td-container">
+          <div class="galleria-td-element" [ngStyle]="{'background-image': 'url(' + gallery9 + ')'}" style="background-position: center center;background-repeat: no-repeat;background-attachment: inherit;background-size: cover;"></div>
+          <div class="galleria-td-element" [ngStyle]="{'background-image': 'url(' + gallery10 + ')'}" style="background-position: center center;background-repeat: no-repeat;background-attachment: inherit;background-size: cover;"></div>
+        </div>
+      </td>
+      <td class="galleria-td">
+        <div class="galleria-element" [ngStyle]="{'background-image': 'url(' + gallery11 + ')'}" style="background-position: center center;background-repeat: no-repeat;background-attachment: inherit;background-size: cover;"></div>
+      </td>    
+    </tr>
+  </table>
+  </div>
+</section>
+
+
+<section id="location" class="location" role="main">
+  <div>
+    <div class="location-fixed" [ngStyle]="{'background-image': 'url(' + guantoni + ')'}">
+        <h1 class="location-title">DOVE TROVARCI</h1>
+        <p class="location-subtitle">INDIRIZZO</p>
+        <p class="location-text">Centro Sportivo Selva, Contrada Vallone della Selva, Cupello, 66051 Cupello CH San Salvo, 66050 <br>
+          (zona kartodromo)</p>
+        <p class="location-subtitle">ORARI</p>
+        <p class="location-text">LUNEDÌ- SABATO</p>
+        <p class="location-text">6:30AM - 7:00PM</p>
+    </div>
+</div>
+</section>
+
+<section id="domande" class="domande" role="main">
+  <div class="domande-container">
+    <div class="domande-element" style="margin-left: 16%">
+      <h1 class="domande-title">CONTATTI</h1>
+      <p class="domande-subtitle">Contattaci o chiamaci per avere maggiori informazioni</p>
+      <p class="domande-text">muaythai360sansalvo@gmail.it<br>
+        +393460161427 | 3209799635  | 3395067102</p>
+        <a href="https://www.facebook.com/Muaythai360TeamPiacente"><img src={{facebookLogo}} style="width: 50px"></a>
+        <a href="https://www.instagram.com/muaythai360sansalvo/"><img src={{igLogo}} style="width: 36px;position: relative;bottom: 6px;padding-left: 10px;"></a>
+    </div>
+    <div class="domande-element" [ngStyle]="{'background-image': 'url(' + logo + ')'}" style="background-position: center center;background-repeat: no-repeat;background-attachment: inherit;background-size: 50%;">
+
+      <!-- <input class="domande-input-1" type="text" placeholder="Nome" id="fname" name="fname">
+      <input class="domande-input-1" type="text" placeholder="Email" id="fname" name="fname">
+      <input class="domande-input-1" type="text" placeholder="Oggetto" id="fname" name="fname">
+      <input class="domande-input-2" type="text" placeholder="Messaggio" id="fname" name="fname">
+      <button class="domande-submit" ><b>Submit</b></button>
+
+      <div></div>
+      <div></div> -->
+
+    </div>
+  </div>
+</section>
+
+<router-outlet></router-outlet>
