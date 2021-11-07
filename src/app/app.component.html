@@ -325,7 +325,7 @@
   }
 
   .bo-lezioni{
-    padding-top: 180px;
+    padding-top: 160px;
     letter-spacing: 0.4em;
     line-height: normal;
     text-align: center;
@@ -404,6 +404,7 @@
     letter-spacing: 0.25em;
     color: white;
     padding-top: 70px;
+    text-shadow: 2px 2px grey;
   }
 
   .location-subtitle{
@@ -413,6 +414,7 @@
     letter-spacing: 0.4em;   
     color: white;
     padding-top: 90px;
+    text-shadow: 2px 2px grey;
   }
 
   .location-text{
@@ -422,6 +424,7 @@
     letter-spacing: normal;
     color: white;
     padding-top: 10px;
+    text-shadow: 2px 2px grey;
   }
 
   .domande{
@@ -496,6 +499,8 @@
     margin-bottom: 6px;
     color: black;
   }
+
+  
   
   ::placeholder {
     color: white;
@@ -563,6 +568,23 @@
     .video-opacity{
       bottom: 0;
     }
+
+    .domande-title{
+      font-size: 45px;
+    }
+    
+    .domande-subtitle{
+      font-size: 32px;
+    }
+
+    .domande-text{
+      font-size: 20px;
+    }
+    
+    .domande-logo{
+      background-size: 35% !important;
+      padding-left: 150px !important;
+    }
   }
 </style>
 
@@ -596,16 +618,16 @@
   <div class="center-about">
     <div class="title-about"><span style="color: var(--gold);">LA NOSTRA</span><br><span style="color: white">STORIA</span></div>
     <div class="container-about"> 
-      <p class="p-about"><b>TEAM PIACENTE</b><br><br>
-        Il Team è nato a San Salvo (CH)  ufficialmente nel <b>1996</b>, fondato  dal maestro Vincenzo Piacente.<br>
+      <p class="p-about"><b><span style="color: var(--gold)">TEAM PIACENTE</span></b><br><br>
+        Il Team è nato a San Salvo (CH)  ufficialmente nel <span style="color: var(--gold)"><b>1996</b></span>, fondato  dal maestro Vincenzo Piacente.<br>
         E' stato premiato come <b>miglior Team Nazionale nell’anno 1999</b>.<br>
         Numerosi i successi ottenuti negli annii dai vari atleti a livello nazionale<br>
-        Vanta successi sia su competizioni dilettantistiche che PRO.<br><br>
-        Nel 2019  il maestro Piacente passa le redini al suo allievo direttissimo Marco Catalano che con la nuova gestione rinomina la nuova sede con il nome di:<br>
-        <b>-Muay Thai 360-</b><br><br>
-        <b>Muay thai 360 perchè?</b><br>
-        Per dare una conoscenza a 360 gradi ,dell’arte millenaria thailandese tra le sue mille sfaccettature ed applicazioni sportive tradizionali e militari.<br><br>
-        Nella nostra palestra è possibile praticare vari sport da combattimento e arti marziali. I corsi sono accessibili a tutti poiché le attività vengono suddivise in modo specifico, a seconda che siano donne o bambini, principianti o agonisti, oppure persone già allenate. Effettuiamo, inoltre, lezioni private e allenamenti liberi.</p>
+        Vanta successi sia su competizioni dilettantistiche che <span style="color: var(--gold)">PRO</span>.<br><br>
+        Nel <span style="color: var(--gold)">2019</span>  il maestro Piacente passa le redini al suo allievo direttissimo Marco Catalano che con la nuova gestione rinomina la nuova sede con il nome di:<br>
+        <span style="color: var(--gold)"><b>-Muay Thai 360-</b></span><br><br>
+        <span style="color: var(--gold)"><b>Muay thai 360 perchè?</b></span><br>
+        Per dare una conoscenza a 360 gradi, dell’arte millenaria thailandese tra le sue mille sfaccettature ed applicazioni sportive tradizionali e militari.<br><br>
+        Nella nostra palestra è possibile praticare vari sport da combattimento e arti marziali. <span style="color: var(--gold)">I corsi sono accessibili a tutti </span>poiché le attività vengono suddivise in modo specifico, a seconda che siano donne o bambini, principianti o agonisti, oppure persone già allenate. Effettuiamo, inoltre, lezioni private e allenamenti liberi.</p>
         <img class="img-about" src={{about}}>
     </div>
   </div>
@@ -748,7 +770,7 @@
         <a href="https://www.facebook.com/Muaythai360TeamPiacente"><img src={{facebookLogo}} style="width: 50px"></a>
         <a href="https://www.instagram.com/muaythai360sansalvo/"><img src={{igLogo}} style="width: 36px;position: relative;bottom: 6px;padding-left: 10px;"></a>
     </div>
-    <div class="domande-element" [ngStyle]="{'background-image': 'url(' + logo +')'}" style="background-position: center center;background-repeat: no-repeat;background-attachment: inherit;background-size: 50%;">
+    <div class="domande-element domande-logo" [ngStyle]="{'background-image': 'url(' + logo +')'}" style="background-position: center center;background-repeat: no-repeat;background-attachment: inherit;background-size: 26%;padding-left: 11%;">
 
       <!-- <input class="domande-input-1" type="text" placeholder="Nome" id="fname" name="fname">
       <input class="domande-input-1" type="text" placeholder="Email" id="fname" name="fname">
