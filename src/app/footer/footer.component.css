@@ -1,0 +1,92 @@
+.domande{
+    position: relative;
+    top: 500px;
+    left: 0;
+    right: 0;
+    height: 330px;  
+  }
+
+  .domande-container{
+    display: flex;
+  }
+
+  .domande-element{
+    width: 33%;
+  }
+
+  .domande-title{
+    line-height: normal;
+    font-size: 32px;
+    color: var(--gold);
+    letter-spacing: 0.4em;
+  }
+
+  .domande-subtitle{
+    line-height: 1.3em;
+    font-size: 26px;
+    color: #FFFFFF;
+    letter-spacing: normal;
+    width: 57%;
+    padding-top: 50px;
+  }
+
+  .domande-text{
+    font-size: 18px;
+    color: #FFFFFF;
+    letter-spacing: normal;
+    padding-top: 20px;
+    line-height: 30px;
+  }
+
+  .domande-input-1{
+    background-color: black;
+    width: 90%;
+    margin-left: 40px;
+    border: 2px solid white;
+    height: 33px;
+    margin-bottom: 6px;
+    font-size: 17px;
+    color: white;
+  }
+
+  .domande-input-2{
+    background-color: black;
+    width: 90%;
+    margin-left: 40px;
+    border: 2px solid white;
+    height: 133px;
+    font-size: 17px;
+    margin-bottom: 6px;
+    color: white;
+  }
+
+  .domande-submit{
+    background-color: var(--gold);
+    width: 30%;
+    float: right;
+    border: 2px solid var(--gold);
+    height: 33px;
+    font-size: 18px;
+    margin-bottom: 6px;
+    color: black;
+  }
+
+  @media screen and (max-device-width: 992px) {
+
+    .domande-title{
+      font-size: 45px;
+    }
+    
+    .domande-subtitle{
+      font-size: 32px;
+    }
+
+    .domande-text{
+      font-size: 20px;
+    }
+    
+    .domande-logo{
+      background-size: 35% !important;
+      padding-left: 150px !important;
+    }
+  }

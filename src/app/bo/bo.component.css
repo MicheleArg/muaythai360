@@ -1,0 +1,54 @@
+.bo{
+    position: relative;
+    background-color: black;
+    top: 450px;
+    left: 0;
+    right: 0;
+    height: 800px;
+  }
+
+  .bo-table{
+    margin: auto;
+    width: 92%;
+  }
+
+  .bo-td{
+    width: 33%;
+    height: 240px;
+    cursor: pointer;
+
+  }
+
+  .bo-td:hover{
+    transform: scale(0.97);
+  }
+
+  .bo-div{
+    background-color: rgb(150,150,149,0.6);
+    width: 100%;
+    height: 100%;
+    display: table;
+    cursor: pointer;
+  }
+
+  .bo-p{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 35px;
+    color: black;
+  }
+
+  .bo-div:hover {
+    visibility: hidden;
+  }
+
+  .bo-lezioni{
+    padding-top: 160px;
+    letter-spacing: 0.4em;
+    line-height: normal;
+    text-align: center;
+    font-size: 40px;
+    color: white;
+  }
+

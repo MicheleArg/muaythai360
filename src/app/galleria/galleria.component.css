@@ -1,0 +1,48 @@
+.galleria{
+    position: relative;
+    background-color: black;
+    top: 500px;
+    left: 0;
+    right: 0;
+    height: 700px;
+  }
+
+  .galleria-table{
+    width: max-content;
+  }
+
+  .galleria-td{
+    width: 650px;
+    height: 500px;
+    overflow-x: scroll;
+  }
+
+  .galleria-element{
+    width: 650px;
+    height: 500px;
+    cursor:pointer;
+  }
+
+  .galleria-element:hover{
+    opacity: 0.5;
+  }
+
+  .galleria-div{
+    width: 100%;
+    overflow-x: scroll;
+  }
+
+  .galleria-td-element{
+    width: 323px;
+    height: 248px;
+    cursor: pointer;
+  }
+
+  .galleria-td-element:hover{
+    opacity: 0.5;
+  }
+
+  .galleria-td-container{
+    display: flex;
+  }
+

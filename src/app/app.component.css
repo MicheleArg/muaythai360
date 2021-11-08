@@ -1,0 +1,46 @@
+::ng-deep :root {
+    --gold: rgb(242, 199, 130);
+    --gold-opacity: rgb(242, 199, 130, 0.8);
+  }
+  
+  
+  @font-face {
+    font-family: 'DINLig';
+    src: url('../assets/fonts/DINNeuzeitGroteskStdBdCond.otf') format('opentype');
+  }
+
+  @font-face {
+    font-family: 'DIN';
+    src: url('../assets/fonts/DINNeuzeitGroteskStdBdCond.otf') format('opentype');
+  }
+
+  ::ng-deep body {
+    background-color: black;
+    overflow-x: hidden;
+  }
+
+  :host {
+    font-family: 'DIN', Fallback, sans-serif !important;
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: black;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 8px 0;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  
+  

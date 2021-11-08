@@ -1,0 +1,28 @@
+.event-container{
+    position: relative;
+    color: white;
+    font-size: 50px;
+}
+
+.event-double{
+    display: inline-flex;
+    width: 100%;
+    height: 100%;
+}
+
+.event-single{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.event-element-double{
+    width: 50%;
+    border: 1px solid red;
+}
+
+.event-element-single{
+    width: 100%;
+    height: 100%;
+    border: 1px solid red;
+}

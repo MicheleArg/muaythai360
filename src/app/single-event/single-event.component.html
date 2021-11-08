@@ -1,0 +1,14 @@
+<div class="event-container" [ngStyle]="styleObject()">
+
+
+    <div *ngIf="getSingleEvent()" class="event-single">
+        <div class="event-element-single"></div>
+    </div>
+
+    <div *ngIf="getDoubleEvent()" class="event-double">
+        <div class="event-element-double"></div>
+        <div class="event-element-double"></div>
+    </div>
+
+</div>
+   
