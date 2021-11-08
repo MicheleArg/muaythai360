@@ -20,13 +20,13 @@
   .team-title{
     color: var(--gold);
     letter-spacing: 0.15em;
-    font-size: 70px;
+    font-size: 5vw;
     float: right;
     text-align: right;
-    padding-right: 70px;
+    padding-right: 5vw;
     width: 228px;
     line-height: 65px;
-    padding-top: 95px;
+    padding-top: 6vw;
   }
 
   .team-text{
@@ -35,22 +35,21 @@
     font-size: 13px;
     float: right;
     text-align: right;
-    padding-right: 80px;
-    width: 375px;
-    padding-top: 10px; 
+    padding-right: 6vw;
+    width: 26vw;
+    padding-top: 1vw;
     letter-spacing: -0.3px;
   }
 
   .team-text2{
     font-size: 19px;
-    font-size: 19px;
     line-height: 1.8em;
     font-family: open sans condensed,sans-serif;
     letter-spacing: -1px;
-    padding-top: 140px;
-    width: 360px;
+    padding-top: 10vw;
+    width: 25vw;
     font-weight: lighter;
-    padding-left: 110px; 
+    padding-left: 8vw;
   }
 
   
@@ -63,7 +62,7 @@
       float: left;
       text-align: left;
       padding-right: 70px;
-      width: 228px;
+      width: 250px;
       line-height: 65px;
       padding-top: 95px;
       padding-left: 90px;
@@ -79,7 +78,7 @@
         width: 52%;
         position: relative;
         letter-spacing: -0.3px;
-        top: -90px;
+        top: -65px;
     }
 
     .team-container{
@@ -92,8 +91,7 @@
     }
 
     .team-text2{
-      font-size: 19px;
-      font-size: 25px;
+      font-size: 32px;
       line-height: 1.8em;
       font-family: open sans condensed,sans-serif;
       letter-spacing: -1px;
@@ -102,5 +100,11 @@
       width: 50%;
       font-weight: lighter;
       padding-left: 0px;
+    }
+  }
+
+  @media screen and (max-width: 660px) {
+    .team-text2{
+        font-size: 17px;
     }
   }

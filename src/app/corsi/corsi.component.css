@@ -4,7 +4,6 @@
     top: 300px;
     left: 0;
     right: 0;
-    height: 700px;
   }
 
   .video-corsi{
@@ -26,6 +25,7 @@
     bottom: -110px;
     left: 0;
     right: 0;
+    height: 57vw;
   }
 
   .corsi-text-container{
@@ -43,8 +43,8 @@
     text-align: center;
     font-size: 7vw;
     letter-spacing: 0.25em;
-    padding-top: 40px;
-  }
+    padding-top: 3vw;  
+}
 
   .corsi-subtitle{
     margin: auto;
@@ -85,3 +85,4 @@
         bottom: 150px;
     }
   }
+

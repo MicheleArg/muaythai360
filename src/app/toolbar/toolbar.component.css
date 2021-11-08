@@ -48,3 +48,9 @@
     color: var(--gold);
     cursor: pointer;
   }
+
+@media screen and (max-device-width: 992px) {
+    .navigation-ul li{
+        font-size: 45px;
+    }
+}

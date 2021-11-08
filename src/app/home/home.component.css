@@ -41,7 +41,7 @@
   }
 
   .home-button-div{
-    width: 11%;
+    width: fit-content;
     margin: auto;
   }
 
@@ -55,6 +55,8 @@
     width: 160px;
     cursor: pointer;
     margin-top: 30px;
+    margin: auto;
+    width: 100%;
   }
 
   .home-button:hover{
@@ -67,6 +69,8 @@
     width: 160px;
     cursor: pointer;
     margin-top: 30px;
+    margin: auto;
+    width: 100%;
   }
 
   
@@ -89,3 +93,5 @@
       height: 1675px;
     }
   }
+
+ 

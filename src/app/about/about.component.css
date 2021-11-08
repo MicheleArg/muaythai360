@@ -54,3 +54,9 @@
       font-size: 9vw;
     }
   }
+
+   @media screen and (max-width: 692px) {
+    .center-about{
+        padding: 100px 0px 0px 20px; 
+    }
+  }

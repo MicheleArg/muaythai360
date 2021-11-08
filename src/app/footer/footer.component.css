@@ -26,7 +26,7 @@
     font-size: 26px;
     color: #FFFFFF;
     letter-spacing: normal;
-    width: 57%;
+    width: 60%;
     padding-top: 50px;
   }
 
@@ -88,5 +88,11 @@
     .domande-logo{
       background-size: 35% !important;
       padding-left: 150px !important;
+    }
+  }
+
+  @media screen and (max-width: 762px) {
+    .domande{
+      top: 600px;
     }
   }
