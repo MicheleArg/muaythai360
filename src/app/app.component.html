@@ -204,7 +204,7 @@
   .corsi{
     position: absolute;
     background-color: black;
-    top: 1750px;
+    top: 2560px;
     left: 0;
     right: 0;
     height: 700px;
@@ -282,7 +282,7 @@
   .bo{
     position: absolute;
     background-color: black;
-    top: 2560px;
+    top: 3390px;
     left: 0;
     right: 0;
     height: 700px;
@@ -336,7 +336,7 @@
   .galleria{
     position: absolute;
     background-color: black;
-    top: 3390px;
+    top: 4200px;
     left: 0;
     right: 0;
     height: 700px;
@@ -383,7 +383,7 @@
 
   .location{
     position: absolute;
-    top: 4090px;
+    top: 4900px;
     left: 0;
     right: 0;
     height: 700px;
@@ -429,7 +429,7 @@
 
   .domande{
     position: absolute;
-    top: 4900px;
+    top: 5700px;
     left: 0;
     right: 0;
     height: 330px;  
@@ -500,6 +500,61 @@
     color: black;
   }
 
+  .team{
+    position: absolute;
+    background-color: black;
+    top: 1750px;
+    left: 0;
+    right: 0;
+    height: 700px;
+  }
+
+  .team-container{
+    display: inline-flex;
+    width: 100%;
+  }
+
+  .team-element{
+    width: 50%;
+    height: 550px;
+  }
+
+  .team-title{
+    color: var(--gold);
+    letter-spacing: 0.15em;
+    font-size: 70px;
+    float: right;
+    text-align: right;
+    padding-right: 70px;
+    width: 228px;
+    line-height: 65px;
+    padding-top: 95px;
+  }
+
+  .team-text{
+    font-family: 'DINLIG', Fallback, sans-serif !important;
+    color: white;
+    font-size: 13px;
+    float: right;
+    text-align: right;
+    padding-right: 80px;
+    width: 375px;
+    padding-top: 10px; 
+    letter-spacing: -0.3px;
+  }
+
+  .team-text2{
+    font-size: 19px;
+    font-size: 19px;
+    line-height: 1.8em;
+    font-family: open sans condensed,sans-serif;
+    letter-spacing: -1px;
+    padding-top: 140px;
+    width: 360px;
+    font-weight: lighter;
+    padding-left: 110px;
+  }
+
   
   
   ::placeholder {
@@ -546,23 +601,23 @@
     }
 
     .corsi{
-      top: 2850px;
+      top:  4350px;
     }
 
     .bo{
-      top: 3560px;
+      top: 5080px;
     }
 
     .galleria{
-      top: 4400px;
+      top: 5900px;
     }
 
     .location{
-      top: 5090px;
+      top: 6550px;
     }
 
     .domande{
-      top: 5900px;
+      top: 7450px;
     }
 
     .video-opacity{
@@ -585,6 +640,56 @@
       background-size: 35% !important;
       padding-left: 150px !important;
     }
+
+    .team{
+      top: 2850px;
+    }
+
+    .team-title{
+      color: var(--gold);
+      letter-spacing: 0.15em;
+      font-size: 65px;
+      float: left;
+      text-align: left;
+      padding-right: 70px;
+      width: 228px;
+      line-height: 65px;
+      padding-top: 95px;
+      padding-left: 90px;
+    }
+
+    .team-text{
+      font-family: 'DINLIG', Fallback, sans-serif !important;
+      color: white;
+      font-size: 28px;
+      float: right;
+      text-align: left;
+      padding-right: 80px;
+      width: 52%;
+      padding-top: 50px;
+      letter-spacing: -0.3px;
+    }
+    .team-container{
+      display: block;
+    }
+
+    .team-element{
+      width: 100%;
+      height: 820px;
+    }
+
+    .team-text2{
+      font-size: 19px;
+      font-size: 25px;
+      line-height: 1.8em;
+      font-family: open sans condensed,sans-serif;
+      letter-spacing: -1px;
+      padding-top: 185px;
+      margin: auto;
+      width: 50%;
+      font-weight: lighter;
+      padding-left: 0px;
+    }
   }
 </style>
 
@@ -596,7 +701,7 @@
       <li class="navigation-li"><a href="#home">HOME</a></li>
       <li class="navigation-li"><a href="#about">CHI SIAMO</a></li>
       <li class="navigation-li"><a href="#corsi">CORSI</a></li>
-      <li class="navigation-li"><a href="#">ISTRUTTORI</a></li>
+      <li class="navigation-li"><a href="#team">ISTRUTTORI</a></li>
       <li class="navigation-li"><a href="#">EVENTI</a></li>
     </ul>
   </div>
@@ -629,6 +734,28 @@
         Per dare una conoscenza a 360 gradi, dell’arte millenaria thailandese tra le sue mille sfaccettature ed applicazioni sportive tradizionali e militari.<br><br>
         Nella nostra palestra è possibile praticare vari sport da combattimento e arti marziali. <span style="color: var(--gold)">I corsi sono accessibili a tutti </span>poiché le attività vengono suddivise in modo specifico, a seconda che siano donne o bambini, principianti o agonisti, oppure persone già allenate. Effettuiamo, inoltre, lezioni private e allenamenti liberi.</p>
         <img class="img-about" src={{about}}>
+    </div>
+  </div>
+</section>
+
+<section id="team" class="team" role="main">
+  <div class="team-container">
+    <div class="team-element" [ngStyle]="{'background-image': 'url(' + team + ')'}"  style="background-image: url(assets/img/gallery1.jpg);background-repeat: no-repeat;background-size: cover;">
+        <div class="team-title">IL TEAM</div>
+        <div class="team-text">
+          <b>ISTRUTTORI:</b><br><br>
+          <b>Vincenzo Piacente</b><br>
+          (12° khan Instructor IMBA)<br><br>
+           <b>Marco Catalano</b><br>
+          (11°khan Trainer Instructor  scuola Oltrecorpo di Fabio Siciliani,3 titoli italiani dilettanti Kombat league, 1 titolo italiano PRO Fight 1) Tecnico Federkombat .<br><br>
+          <b>Michele Zizzari</b><br>
+          (11° khan advance Trainer Instructor IMBA)<br><br>
+           <b>Felice Nozzi</b><br>
+          (11° khan advance Trainer Instructor IMBA)</div>
+    </div>
+    <div class="team-element" style="background-color: var(--gold)">
+      <div class="team-text2">Il nostro staff ha una preparazione approfondita di tutte le discipline che insegniamo nella nostra palestra. Il team è formato da professionisti che ti affiancheranno durante il tuo allenamento o il tuo percorso di preparazione atletica.
+      </div>
     </div>
   </div>
 </section>

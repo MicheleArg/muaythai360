@@ -32,7 +32,7 @@ export class AppComponent {
   igLogo = 'assets/img/ig.png';
   about = 'assets/img/about.png';
   boxe = 'assets/video/boxe.mp4';
-
+  team='assets/img/gallery1.jpg';
   // logo = '../assets/img/logo.png';
   // home = '../assets/img/home.png';
   // guantoni = '../assets/img/guantoni.jpeg';
