@@ -9,7 +9,6 @@ export class ToolbarComponent implements OnInit {
   logo = 'assets/img/logo.png';
   isMobile : boolean = false;
 
-
   constructor() { }
 
   ngOnInit(): void {
