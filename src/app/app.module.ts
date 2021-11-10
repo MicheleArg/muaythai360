@@ -14,6 +14,7 @@ import { GalleriaComponent } from './galleria/galleria.component';
 import { LocationComponent } from './location/location.component';
 import { FooterComponent } from './footer/footer.component';
 import { SingleEventComponent } from './single-event/single-event.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { SingleEventComponent } from './single-event/single-event.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
