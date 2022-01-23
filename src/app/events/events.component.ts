@@ -33,8 +33,7 @@ export class EventsComponent implements OnInit {
       )
     ).subscribe(data => {
       this.events = data;
-      console.log('#data ----> ');
-      console.log(data);
+      this.events.sort(function(a: { order: number; }, b: { order: number; }) { return a.order - b.order; })
     });
   }
 }

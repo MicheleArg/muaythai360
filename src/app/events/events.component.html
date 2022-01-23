@@ -2,9 +2,9 @@
 
 <p class="events-title">I NOSTRI EVENTI</p>
 
-<div *ngFor="let obj of events" style>
+<div *ngFor="let obj of events; let indexOfelement=index" style>
     <div class="event-style">
-        <app-single-event [height]='2' [toppos]='0' [type]="double" [image]="obj.immagine" [title]="obj.title" [description]="obj.description"></app-single-event>
+        <app-single-event [index]="indexOfelement" [height]='2' [toppos]='0' [type]="double" [image]="obj.immagine" [title]="obj.title" [description]="obj.description"></app-single-event>
     </div>
 </div>
 

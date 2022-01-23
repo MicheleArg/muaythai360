@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./team.component.css']
 })
 export class TeamComponent implements OnInit {
-  team='assets/img/gallery1.jpg';
+  team='assets/img/team.jpg';
 
   constructor() { }
 

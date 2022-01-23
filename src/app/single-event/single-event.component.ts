@@ -12,6 +12,7 @@ export class SingleEventComponent implements OnInit {
   @Input() image?: any;
   @Input() title?: any;
   @Input() description?: any;
+  @Input() index?: number;
   showVal: boolean = false;
   pathImage = "";
   heightval = "";
@@ -60,5 +61,17 @@ export class SingleEventComponent implements OnInit {
 
   showEvent(){
     this.showVal = true;
+  }
+
+  getEven(){
+    if(this.index != undefined)
+      return (this.index % 2 == 0)
+    return false;
+  }
+
+  getOdds(){
+    if(this.index != undefined)
+      return (this.index % 2 == 1)
+    return false;
   }
 }

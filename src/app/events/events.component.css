@@ -1,12 +1,15 @@
 .events-title{
     color: white;
     position: relative;
-    top: 200px;
+    top: 300px;
     width: fit-content;
-    font-size: 60px;
+    font-size: 75px;
     margin: auto;
+    letter-spacing: 20px;
 }
 
 .event-style{
     margin-bottom: 100px;
+    position: relative;
+    top: 500px;
 }
