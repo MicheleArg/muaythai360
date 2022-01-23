@@ -29,7 +29,7 @@ export class SingleEventComponent implements OnInit {
     this.top = y + 'px'
     console.log(this.heightval);
     console.log(this.top);
-    this.pathImage='../../assets/img/'+this.image;
+    this.pathImage='assets/img/'+this.image;
     console.log(this.pathImage);
     // this.showEvent();
   }
