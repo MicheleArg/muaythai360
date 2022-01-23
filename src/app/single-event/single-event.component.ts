@@ -9,6 +9,11 @@ export class SingleEventComponent implements OnInit {
   @Input() height?: number;
   @Input() toppos?: number;
   @Input() type?: String;
+  @Input() image?: any;
+  @Input() title?: any;
+  @Input() description?: any;
+  showVal: boolean = false;
+  pathImage = "";
   heightval = "";
   top = "";
   constructor() { 
@@ -23,6 +28,9 @@ export class SingleEventComponent implements OnInit {
     this.top = y + 'px'
     console.log(this.heightval);
     console.log(this.top);
+    this.pathImage='../../assets/img/'+this.image;
+    console.log(this.pathImage);
+    // this.showEvent();
   }
 
   styleObject(){
@@ -44,5 +52,13 @@ export class SingleEventComponent implements OnInit {
       if(this.type=='Double') return true;
     }
     return false;
+  }
+
+  getShowEvent(){
+    return this.showVal;
+  }
+
+  showEvent(){
+    this.showVal = true;
   }
 }

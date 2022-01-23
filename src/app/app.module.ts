@@ -15,7 +15,11 @@ import { LocationComponent } from './location/location.component';
 import { FooterComponent } from './footer/footer.component';
 import { SingleEventComponent } from './single-event/single-event.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { EventsService} from './service/events.service';
 
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { environment } from '../environments/environment';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,9 +38,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFirestoreModule, // for firestore
   ],
-  providers: [],
+  providers: [EventsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

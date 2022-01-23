@@ -2,8 +2,14 @@
 
 <p class="events-title">I NOSTRI EVENTI</p>
 
-<app-single-event [height]='1' [toppos]='0' [type]="single"></app-single-event>
-<app-single-event [height]='2' [toppos]='100' [type]="double"></app-single-event>
+<div *ngFor="let obj of events" style>
+    <div class="event-style">
+        <app-single-event [height]='2' [toppos]='0' [type]="double" [image]="obj.immagine" [title]="obj.title" [description]="obj.description"></app-single-event>
+    </div>
+</div>
+
+<!-- <app-single-event [height]='2' [toppos]='0' [type]="double" [image]="" [title]="" [description]=""}></app-single-event> -->
+<!-- <app-single-event [height]='2' [toppos]='100' [type]="double"></app-single-event> -->
 <!-- <app-single-event [height]='2' [toppos]='1'></app-single-event> -->
 
 <app-footer></app-footer>
