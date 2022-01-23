@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class TeamComponent implements OnInit {
   team='assets/img/team.jpg';
 
-  constructor() { }
+  constructor() { } 
 
   ngOnInit(): void {
   }
