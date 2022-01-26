@@ -1,4 +1,4 @@
-export default class Tutorial {
+export default class Event {
   title!: string;
   description!: string;
   immagine!: string;

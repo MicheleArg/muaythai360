@@ -18,9 +18,6 @@ export class EventsComponent implements OnInit {
   constructor(private eventService: EventsService) { }
 
   ngOnInit(): void {
-    this.event.title = 'test1';
-    this.event.description = 'test1';
-    this.event.immagine = 'test1';
     this.retrieveTutorials()
   }
 

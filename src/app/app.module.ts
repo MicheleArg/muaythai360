@@ -16,10 +16,14 @@ import { FooterComponent } from './footer/footer.component';
 import { SingleEventComponent } from './single-event/single-event.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EventsService} from './service/events.service';
+import { ArticoloService} from './service/articolo.service';
 
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { environment } from '../environments/environment';
+import { ArticoliComponent } from './articoli/articoli.component';
+import { SingleArticoloComponent } from './single-articolo/single-articolo.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +37,9 @@ import { environment } from '../environments/environment';
     GalleriaComponent,
     LocationComponent,
     FooterComponent,
-    SingleEventComponent
+    SingleEventComponent,
+    ArticoliComponent,
+    SingleArticoloComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +48,10 @@ import { environment } from '../environments/environment';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule, // for firestore
   ],
-  providers: [EventsService],
+  providers: [
+    EventsService,
+    ArticoloService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

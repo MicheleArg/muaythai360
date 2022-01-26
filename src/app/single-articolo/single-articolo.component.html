@@ -1,0 +1,31 @@
+<div class="articolo-container" *ngIf="getEven()">
+    <div class="articolo-box" >
+        <div class="articolo-element">
+            <img src={{pathImage}} alt="" width="100%" height="100%">
+        </div>
+        <div class="articolo-element" style="border: 1px solid rgb(255,255,255, 0.1)">
+            <p class="p-articolo" [innerHTML]="description"></p>
+        </div>
+    </div>
+    <div class="articolo-box-title" >
+        <div class="articolo-line">
+            <p class="articolo-title">{{title}}</p>
+        </div>
+    </div>
+</div>
+
+<div class="articolo-container" *ngIf="getOdd()">
+    <div class="articolo-box-title" >
+        <div class="articolo-line">
+            <p class="articolo-title">{{title}}</p>
+        </div>
+    </div>
+    <div class="articolo-box" >
+        <div class="articolo-element">
+            <img src={{pathImage}} alt="" width="100%" height="100%">
+        </div>
+        <div class="articolo-element" style="border: 1px solid rgb(255,255,255, 0.1)">
+            <p class="p-articolo" [innerHTML]="description"></p>
+        </div>
+    </div>
+</div>

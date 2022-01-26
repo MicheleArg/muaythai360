@@ -1,0 +1,22 @@
+<!-- <app-toolbar></app-toolbar> -->
+<div class="header-articoli">
+    <div class="header-img" [ngStyle]="{'background-image': 'url(' + header + ')'}">
+        <p class="header-text">Scopri gli ultimi articoli di <br>MUAY THAI 360</p>
+    </div>
+    <div class="home-buttom">
+        <span class="home-text"><a class="home-link" href="#">HOME</a> | BLOG</span>
+    </div>
+</div>
+
+
+<div *ngFor="let obj of articoli; let indexOfelement=index" style>
+    <app-single-articolo [index]="indexOfelement" [image]="obj.immagine" [title]="obj.title" [description]="obj.description"></app-single-articolo>
+</div>
+
+
+
+<!-- <div *ngFor="let obj of events; let indexOfelement=index" style>
+    <div class="event-style">
+        <app-single-articolo [index]="indexOfelement" [height]='2' [toppos]='0' [type]="double" [image]="obj.immagine" [title]="obj.title" [description]="obj.description"></app-single-event>
+    </div>
+</div> -->

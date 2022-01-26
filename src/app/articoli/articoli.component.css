@@ -1,0 +1,50 @@
+.header-img{
+    width: inherit;
+    height: 300px;
+}
+
+.header-articoli{
+    width:100%;
+}
+
+.home-buttom{
+    width: 100px;
+    height: 36px;
+    position: relative;
+    top: -22px;
+    margin: auto;
+    background: var(--gold);
+    color: black;
+    text-align: center;
+}
+
+.home-link{
+    color: black;
+    text-decoration: none;
+}
+
+.home-link:visited{
+    text-transform: none;
+    text-decoration: none;
+}
+
+.home-link:hover{
+    color: white;
+    cursor: pointer;
+}
+
+.home-text{
+    position: relative;
+    top: 10px;
+}
+
+.header-text{
+    width: fit-content;
+    margin: auto;
+    font-size: 5.3vw;
+    color: white;
+    text-align: center;
+    padding-top: 50px;
+    font-family: 'DIN', Fallback, sans-serif !important;
+}
+
