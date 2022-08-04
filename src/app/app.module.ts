@@ -23,6 +23,7 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { environment } from '../environments/environment';
 import { ArticoliComponent } from './articoli/articoli.component';
 import { SingleArticoloComponent } from './single-articolo/single-articolo.component';
+import { PaginaCorsiComponent } from './pagina-corsi/pagina-corsi.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { SingleArticoloComponent } from './single-articolo/single-articolo.compo
     FooterComponent,
     SingleEventComponent,
     ArticoliComponent,
-    SingleArticoloComponent
+    SingleArticoloComponent,
+    PaginaCorsiComponent
   ],
   imports: [
     BrowserModule,

@@ -76,6 +76,34 @@
     width: 20%;
   }
 
+.corso-link{
+  color: var(--gold);
+  text-transform: none;
+  text-decoration: none;
+}
+
+.corso-link:visited{
+  text-transform: none;
+  text-decoration: none;
+}
+
+.corso-link:hover{
+  cursor: pointer;
+}
+
+.corso-td{
+  background-image: linear-gradient(var(--gold), var(--gold));
+  background-size: 0% 1px;
+  background-repeat: no-repeat;
+  transition: background-size 0.5s;
+  background-position: 0 calc(100% - 0px)
+}
+
+.corso-td:hover{
+  background-size: 100% 1px;
+}
+
+
   @media screen and (max-device-width: 992px) {
     .corsi{
       top: 300px;
