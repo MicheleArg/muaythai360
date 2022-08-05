@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { CONST } from 'src/configurations/constants';
 
 @Component({
   selector: 'app-single-articolo',
@@ -14,7 +15,7 @@ export class SingleArticoloComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.pathImage='assets/img/'+this.image;
+    this.pathImage=CONST.PATH+this.image;
   }
 
   getEven(){

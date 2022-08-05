@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { CONST } from 'src/configurations/constants';
 
 @Component({
   selector: 'app-single-event',
@@ -29,7 +30,7 @@ export class SingleEventComponent implements OnInit {
     this.top = y + 'px'
     console.log(this.heightval);
     console.log(this.top);
-    this.pathImage='assets/img/'+this.image;
+    this.pathImage=CONST.PATH+this.image;
     console.log(this.pathImage);
     // this.showEvent();
   }

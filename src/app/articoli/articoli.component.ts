@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ArticoloService } from '../service/articolo.service';
 import Articolo from 'src/app/models/Articolo';
 import { map } from 'rxjs/operators';
+import { CONST } from 'src/configurations/constants'
 
 @Component({
   selector: 'app-articoli',
@@ -9,8 +10,8 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./articoli.component.css']
 })
 export class ArticoliComponent implements OnInit {
-  header = 'assets/img/home.png';
-  pathImage = 'assets/img/home.png';
+  header = CONST.HEADER_IMG;
+  pathImage = CONST.PATH_IMG;
   articoli: any;
 
   constructor(private articoloService: ArticoloService) { }
