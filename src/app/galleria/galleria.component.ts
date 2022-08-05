@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CONST } from 'src/configurations/constants';
 
 @Component({
   selector: 'app-galleria',
@@ -6,17 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./galleria.component.css']
 })
 export class GalleriaComponent implements OnInit {
-  gallery1 = 'assets/img/gallery1.jpg';
-  gallery2 = 'assets/img/gallery2.jpg';
-  gallery3 = 'assets/img/gallery3.jpg';
-  gallery4 = 'assets/img/gallery4.jpg';
-  gallery5 = 'assets/img/gallery5.jpg';
-  gallery6 = 'assets/img/gallery6.jpg';
-  gallery7 = 'assets/img/gallery7.jpg';
-  gallery8 = 'assets/img/gallery8.jpg';
-  gallery9 = 'assets/img/gallery9.jpg';
-  gallery10 = 'assets/img/gallery10.jpg';
-  gallery11 = 'assets/img/gallery11.jpg';
+  gallery1 = CONST.GALLERY1;
+  gallery2 = CONST.GALLERY2;
+  gallery3 = CONST.GALLERY3;
+  gallery4 = CONST.GALLERY4;
+  gallery5 = CONST.GALLERY5;
+  gallery6 = CONST.GALLERY6;
+  gallery7 = CONST.GALLERY7;
+  gallery8 = CONST.GALLERY8;
+  gallery9 = CONST.GALLERY9;
+  gallery10 = CONST.GALLERY10;
+  gallery11 = CONST.GALLERY11;
   constructor() { }
 
   ngOnInit(): void {

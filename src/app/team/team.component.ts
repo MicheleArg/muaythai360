@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CONST } from 'src/configurations/constants';
 
 @Component({
   selector: 'app-team',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./team.component.css']
 })
 export class TeamComponent implements OnInit {
-  team='assets/img/team.jpg';
+  team= CONST.TEAM_IMG;
 
   constructor() { } 
 

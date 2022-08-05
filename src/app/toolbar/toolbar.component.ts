@@ -1,4 +1,5 @@
 import { Component, HostListener, OnInit } from '@angular/core';
+import { CONST } from 'src/configurations/constants';
 
 @Component({
   selector: 'app-toolbar',
@@ -6,7 +7,7 @@ import { Component, HostListener, OnInit } from '@angular/core';
   styleUrls: ['./toolbar.component.css']
 })
 export class ToolbarComponent implements OnInit {
-  logo = 'assets/img/logo.png';
+  logo = CONST.LOGO_IMG;
   isMobile : boolean = false;
   isResponsive : boolean = false;
 

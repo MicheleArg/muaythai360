@@ -25,6 +25,9 @@ import { ArticoliComponent } from './articoli/articoli.component';
 import { SingleArticoloComponent } from './single-articolo/single-articolo.component';
 import { PaginaCorsiComponent } from './pagina-corsi/pagina-corsi.component';
 
+import { MatDialogModule } from '@angular/material/dialog';
+import { ModalCorsoComponent as ModalCorso } from './modal-corso/modal-corso.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +44,8 @@ import { PaginaCorsiComponent } from './pagina-corsi/pagina-corsi.component';
     SingleEventComponent,
     ArticoliComponent,
     SingleArticoloComponent,
-    PaginaCorsiComponent
+    PaginaCorsiComponent,
+    ModalCorso,
   ],
   imports: [
     BrowserModule,
@@ -49,11 +53,14 @@ import { PaginaCorsiComponent } from './pagina-corsi/pagina-corsi.component';
     BrowserAnimationsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule, // for firestore
+    MatDialogModule,
   ],
   providers: [
     EventsService,
     ArticoloService
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [ModalCorso]
+
 })
 export class AppModule { }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CONST } from 'src/configurations/constants';
 
 @Component({
   selector: 'app-location',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./location.component.css']
 })
 export class LocationComponent implements OnInit {
-  guantoni = 'assets/img/guantoni.jpeg';
+  guantoni = CONST.GUANTONI_IMG;
 
   constructor() { }
 
