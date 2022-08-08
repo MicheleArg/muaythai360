@@ -127,8 +127,8 @@ export class SingleEventComponent implements OnInit {
       const modalDialog = this.matDialog.open(ModalEventDialog,{
         disableClose : false,
         id : "modal-event",
-        width : "50%",
-        height: "50%",
+        width : "70%",
+        height: "70%",
         backdropClass: 'backdropBackground',
         hasBackdrop: true,
         data: { 
