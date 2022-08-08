@@ -178,7 +178,8 @@
         }
 
         .p-event{
-            font-size: 50px;
+            font-size: 40px;
+            letter-spacing: 5px;
         }
 
         .event-element{
@@ -201,5 +202,13 @@
 
         .odd{
             display:none;
+        }
+
+        .moreButton{
+            font-size: 30px;
+        }
+
+        .cdk-global-overlay-wrapper{
+            top: -7% !important;
         }
     }
