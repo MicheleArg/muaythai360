@@ -111,17 +111,31 @@ export class SingleEventComponent implements OnInit {
     let val = this.description;
 
     // https://material.angular.io/components/dialog/overview
-    const modalDialog = this.matDialog.open(ModalEventDialog,{
-      disableClose : false,
-      id : "modal-event",
-      width : "50%",
-      height: "50%",
-      backdropClass: 'backdropBackground',
-      hasBackdrop: true,
-      data: { 
-        text : val,
-      },
-    });
+    if(this.isMobile){
+      const modalDialog = this.matDialog.open(ModalEventDialog,{
+        disableClose : false,
+        id : "modal-event",
+        width : "80%",
+        height: "60%",
+        backdropClass: 'backdropBackground',
+        hasBackdrop: true,
+        data: { 
+          text : val,
+        },
+      });
+    }else{
+      const modalDialog = this.matDialog.open(ModalEventDialog,{
+        disableClose : false,
+        id : "modal-event",
+        width : "50%",
+        height: "50%",
+        backdropClass: 'backdropBackground',
+        hasBackdrop: true,
+        data: { 
+          text : val,
+        },
+      });
+    }
   }
 }
 
