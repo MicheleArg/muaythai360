@@ -1,7 +1,21 @@
-
 <section>
-    <div style="width:100%; height: 700px;">
-        {{title}}
-    </div>
-</section>
+    <button *ngIf="isLast()" class="right-arrow" (click)="goNext()"><mat-icon>arrow_forward_ios</mat-icon></button>
+    <button *ngIf="isFirst()" class="left-arrow" (click)="goPrev()"><mat-icon>arrow_back_ios</mat-icon></button>
 
+    <div class="gold-block-cont">
+        <div class="gold-block"></div>
+        <div class="gold-block" style="border-bottom-left-radius: 100%;height: 12px;border-bottom-right-radius: 100%;"></div>
+        <div class="hole"></div>
+    </div>
+    <div class="container">
+        <div style="display: flex;padding-top: 90px;width: 80%;">
+            <div class="title">{{title}}</div>
+            <img class="img-corso" src={{immagine}}>
+        </div>
+        <div>
+            <div class="body">
+                {{body}}
+             </div>
+        </div>
+    </div>
+</section> 

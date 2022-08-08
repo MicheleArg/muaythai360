@@ -27,6 +27,7 @@ import { PaginaCorsiComponent } from './pagina-corsi/pagina-corsi.component';
 
 import { MatDialogModule } from '@angular/material/dialog';
 import { ModalCorsoComponent as ModalCorso } from './modal-corso/modal-corso.component';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -54,6 +55,7 @@ import { ModalCorsoComponent as ModalCorso } from './modal-corso/modal-corso.com
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule, // for firestore
     MatDialogModule,
+    MatIconModule,
   ],
   providers: [
     EventsService,

@@ -12,20 +12,22 @@
         </div>
     </div> -->
     <div class="event-triple">
-        <div class="event-element">
+        <div class="event-element even">
             <div *ngIf="getEven()">
-                <p class="p-event-title"><span style="margin-top:0;font-size:50px; color: var(--gold); letter-spacing:15px;font-family: 'DIN', Fallback, sans-serif !important;" >{{title}}</span></p>
-                <p class="p-event" style="height: 355px;overflow-x: scroll;" [innerHTML]="description"></p>
+                <p class="p-event-title"><span class="span-event-title" >{{title}}</span></p>
+                <p #ev class="p-event" style="max-height: 20vw;overflow: hidden;" [innerHTML]="description"></p>
+                <button *ngIf="checkOverflow(ev)" (click)="openModal()" class="moreButton"> Continua a leggere... </button>
             </div>
         </div>
-        <div class="event-element">
+        <div class="event-element img">
             <div class="white-line"></div>
             <img src={{pathImage}} alt="event-image" width="100%">
         </div>
-        <div class="event-element" >
+        <div class="event-element odd" >
             <div *ngIf="getOdds()">
-                <p class="p-event-title"><span style="margin-top:0;font-size:50px; color: var(--gold); letter-spacing:15px;font-family: 'DIN', Fallback, sans-serif !important;" >{{title}}</span></p>
-                <p class="p-event" style="height: 355px;overflow-x: scroll;" [innerHTML]="description"></p>
+                <p class="p-event-title"><span class="span-event-title">{{title}}</span></p>
+                <p #ev2  class="p-event" style="max-height: 20vw;overflow: hidden;" [innerHTML]="description"></p>
+                <button *ngIf="checkOverflow(ev2)" (click)="openModal()" class="moreButton"> Continua a leggere... </button>
             </div>
         </div>
     </div>
