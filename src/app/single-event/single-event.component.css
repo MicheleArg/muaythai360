@@ -152,6 +152,41 @@
             padding-bottom: 90px;
         }
 
+
+
+        .white-line{
+            display: none;
+        }
+
+        .img{
+            width: 50%;
+        }
+
+        .even{
+            width: 50%;
+        }
+
+        .odd{
+            display:none;
+        }
+    }
+
+    @media screen and (max-device-width: 992px) {
+
+        .span-event-title{
+            font-size: 55px;
+        }
+
+        .p-event{
+            font-size: 50px;
+        }
+
+        .event-element{
+            width:20vw;
+            padding: 35px;
+            padding-bottom: 90px;
+        }
+
         .white-line{
             display: none;
         }

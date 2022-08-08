@@ -20,11 +20,13 @@ export class SingleEventComponent implements OnInit {
   heightval = "";
   top = "";
   isResponsive: boolean = false;
+  isMobile: boolean = false;
 
   constructor(public matDialog: MatDialog) { 
   } 
 
   ngOnInit(): void {
+    this.isMobile=window.matchMedia("only screen and (max-device-width: 992px)").matches;
     let x: number = 250;
     let y: number = 250;
     if(this.height != undefined) x = x* this.height;
@@ -69,14 +71,14 @@ export class SingleEventComponent implements OnInit {
 
   getEven(){
     if(this.index != undefined ){
-      return (this.index % 2 == 0 || this.isResponsive)
+      return (this.index % 2 == 0 || this.isResponsive || this.isMobile)
     }
     return false;
   }
 
   getOdds(){
     if(this.index != undefined) {
-      return (this.index % 2 == 1 && !this.isResponsive)
+      return (this.index % 2 == 1 && !this.isResponsive && !this.isMobile)
     }
     return false;
   }
@@ -93,6 +95,10 @@ export class SingleEventComponent implements OnInit {
 
   getBrowserWidth(){
     return window.innerWidth;
+  }
+
+  getMobile(){
+    return this.isMobile;
   }
 
   checkOverflow (element: { offsetHeight: number; scrollHeight: number; offsetWidth: number; scrollWidth: number; }) {
