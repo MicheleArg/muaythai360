@@ -77,7 +77,7 @@
     }
 
     .event-element{
-        width:33%;
+        width:22vw;
         padding: 35px;
         padding-bottom: 90px;
     }
@@ -105,4 +105,66 @@
 
     .p-event-title{
         margin-top: 0;
+    }
+
+    .span-event-title{
+        margin-top:0;
+        font-size:50px; 
+        color: var(--gold); 
+        letter-spacing:15px;
+        font-family: 'DIN', Fallback, sans-serif !important;
+    }
+
+    .backdropBackground{
+        background: rgba(255, 255, 255, 0.288);
+        opacity: 0.2;
+    }
+
+    .transparent {
+        background: rgba(0,0,0,.0);
+    }
+    
+
+    .moreButton{
+        border: none;
+        background: none;
+        color: white;
+        margin: 0;
+        padding: 0;
+    }
+
+    @media screen and (max-width: 1000px) {
+        .event-element{
+            width:20vw;
+            padding: 35px;
+            padding-bottom: 90px;
+        }
+
+        .span-event-title{
+            font-size: 4vw;
+        }
+    }
+
+    @media screen and (max-width: 800px) {
+        .event-element{
+            width:20vw;
+            padding: 35px;
+            padding-bottom: 90px;
+        }
+
+        .white-line{
+            display: none;
+        }
+
+        .img{
+            width: 50%;
+        }
+
+        .even{
+            width: 50%;
+        }
+
+        .odd{
+            display:none;
+        }
     }

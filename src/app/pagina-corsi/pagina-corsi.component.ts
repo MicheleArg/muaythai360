@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { CONST } from 'src/configurations/constants';
+import { CONST, getConstant } from 'src/configurations/constants';
+import Corso from '../models/Corso';
+import { CorsoService } from '../service/corso.service';
 
 
 @Component({
@@ -9,19 +11,36 @@ import { CONST } from 'src/configurations/constants';
   styleUrls: ['./pagina-corsi.component.css']
 })
 export class PaginaCorsiComponent implements OnInit {
-  title?: any;
-  img?: any;
-  body?: any;
-  gallery11 = CONST.GALLERY11;
+  id? : any;
+  immagine : any;
+  title: any;
+  body: any;
+  corso?: Corso;
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private corsoService: CorsoService) { }
 
   ngOnInit(): void {
-    this.title = this.route.snapshot.queryParamMap.get('titolo');
+    this.id = this.route.snapshot.queryParamMap.get('titolo');
+    this.retrieveCorso()
   }
 
-  ngAfterViewChecked(): void{
-    window.scroll(0,0);
+
+
+  retrieveCorso(): void {
+    console.log(this.corsoService.get(this.id));
+    this.corsoService.get(this.id).then((data: Corso | undefined) =>{
+      this.corso = data;
+      this.immagine = getConstant(this.corso?.Immagine);
+      this.body = this.corso?.Descrizione;
+      this.title = this.corso?.Titolo;
+      console.log(this.corso);
+      console.log(this.immagine);
+      console.log(this.body);
+      console.log(this.title);
+
+    });
+    
   }
+
 
 }

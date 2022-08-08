@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, ElementRef, HostListener, Inject, Input, OnInit } from '@angular/core';
+import { MatDialog, MatDialogConfig, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { CONST } from 'src/configurations/constants';
 
 @Component({
@@ -18,7 +19,9 @@ export class SingleEventComponent implements OnInit {
   pathImage = "";
   heightval = "";
   top = "";
-  constructor() { 
+  isResponsive: boolean = false;
+
+  constructor(public matDialog: MatDialog) { 
   } 
 
   ngOnInit(): void {
@@ -65,14 +68,76 @@ export class SingleEventComponent implements OnInit {
   }
 
   getEven(){
-    if(this.index != undefined)
-      return (this.index % 2 == 0)
+    if(this.index != undefined ){
+      return (this.index % 2 == 0 || this.isResponsive)
+    }
     return false;
   }
 
   getOdds(){
-    if(this.index != undefined)
-      return (this.index % 2 == 1)
+    if(this.index != undefined) {
+      return (this.index % 2 == 1 && !this.isResponsive)
+    }
     return false;
   }
+
+  @HostListener('window:resize', ['$event'])
+  onResize() {
+    if(this.getBrowserWidth()<800){
+      this.isResponsive=true;
+    }
+    else{
+      this.isResponsive=false;
+    }
+  }
+
+  getBrowserWidth(){
+    return window.innerWidth;
+  }
+
+  checkOverflow (element: { offsetHeight: number; scrollHeight: number; offsetWidth: number; scrollWidth: number; }) {
+    return element.offsetHeight < element.scrollHeight ||
+           element.offsetWidth < element.scrollWidth;
+  }
+
+  openModal() {
+    const dialogConfig = new MatDialogConfig();
+    let val = this.description;
+
+    // https://material.angular.io/components/dialog/overview
+    const modalDialog = this.matDialog.open(ModalEventDialog,{
+      disableClose : false,
+      id : "modal-event",
+      width : "50%",
+      height: "50%",
+      backdropClass: 'backdropBackground',
+      hasBackdrop: true,
+      data: { 
+        text : val,
+      },
+    });
+  }
+}
+
+export interface DialogData {
+  text: string;
+}
+
+
+@Component({
+  selector: 'modal-event-dialog',
+  templateUrl: 'modal-event-dialog.html',
+  styleUrls: ['./single-event.component.css']
+
+})
+export class ModalEventDialog {
+
+  constructor(@Inject(MAT_DIALOG_DATA) public data: DialogData) {}
+
+    desc?: any;
+    ngOnInit(): void{
+      this.desc = this.data.text;
+    }
+
+
 }
